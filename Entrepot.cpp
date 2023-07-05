@@ -1,3 +1,4 @@
+/// Auteur: Pierre MASSONIE
 #include "Entrepot.h"
 
 #include <iostream>
@@ -52,3 +53,5 @@ void Entrepot::afficherStock() {
 		}
 	}
 }
+
+inline std::vector<Marchandise*>* Entrepot::getStock(TypeMarchandise type) { return &m_stock[type]; }

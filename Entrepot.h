@@ -20,5 +20,7 @@ public:
 	int nombreProduit(TypeMarchandise type);
 
 	void afficherStock();
+
+	std::vector<Marchandise*>* getStock(TypeMarchandise type);
 };
 

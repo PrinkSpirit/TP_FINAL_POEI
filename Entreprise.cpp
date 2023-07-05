@@ -14,10 +14,28 @@ Entreprise::~Entreprise()
 {
 }
 
-void Entreprise::acheter()
+
+
+float Entreprise::devisAchat(Entreprise* entreprise, TypeMarchandise type, int quantite)
+{
+	return 0.0f;
+}
+
+bool Entreprise::acheter(Entreprise* entreprise, TypeMarchandise type, int quantite)
+{
+
+}
+
+float Entreprise::calculerDevis(TypeMarchandise type, int quantite)
+{
+	return 0.0f;
+}
+
+bool Entreprise::vendre(TypeMarchandise type, int quantite)
 {
 }
 
-void Entreprise::vendre()
+std::vector<Marchandise*>* Entreprise::voirStock(TypeMarchandise type) const
 {
+	return nullptr;
 }
