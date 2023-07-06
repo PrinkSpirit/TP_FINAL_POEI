@@ -29,9 +29,9 @@ float Entreprise::getTresorerie() const
 	return m_tresorerie;
 }
 
-std::vector<std::string>& Entreprise::getProduits() const
+std::vector<std::string> Entreprise::getProduits() const
 {
-	return &m_produits;
+	return m_produits;
 }
 
 
@@ -43,7 +43,7 @@ float Entreprise::devisAchat(Entreprise* entreprise, std::string type, int quant
 
 bool Entreprise::acheter(Entreprise* entreprise, std::string type, int quantite)
 {
-
+	return false;
 }
 
 float Entreprise::calculerDevis(std::string type, int quantite)
@@ -53,6 +53,7 @@ float Entreprise::calculerDevis(std::string type, int quantite)
 
 bool Entreprise::vendre(std::string type, int quantite)
 {
+	return false;
 }
 
 std::vector<Marchandise*>* Entreprise::voirStock(std::string type) const

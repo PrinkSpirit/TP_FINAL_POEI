@@ -21,5 +21,8 @@ public:
 
 	void chargerMarchandises(std::string chemin);
 	void chargerEntreprises(std::string chemin);
+
+	void listerMarchandises();
+	void listerEntreprises();
 };
 

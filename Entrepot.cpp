@@ -19,7 +19,7 @@ void Entrepot::stocker(Marchandise* marchandise) {
 }
 
 void Entrepot::destocker(Marchandise* marchandise) {
-	std::vector<Marchandise*>* listeMarchandise = &m_stock[marchandise->type];
+	std::vector<Marchandise*>* listeMarchandise = &m_stock[marchandise->nom];
 
 	for (int i = 0; i < listeMarchandise->size(); i++) {
 		if (listeMarchandise->at(i)->id == marchandise->id) {

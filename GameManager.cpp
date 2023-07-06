@@ -20,10 +20,10 @@ void GameManager::chargerMarchandises(std::string chemin)
 	if (fichier)
 	{
 		std::string ligne;
-		Marchandise march;
 
 		while (std::getline(fichier, ligne))
 		{
+			Marchandise march;
 			int count = 0;
 			std::string::const_iterator it(ligne.cbegin());
 			while (std::regex_search(it, ligne.cend(), match, march_rgx)) {
@@ -35,9 +35,10 @@ void GameManager::chargerMarchandises(std::string chemin)
 					else
 						march.listeIngredients[match[0].str()] +=1;
 				}
+				it = match.suffix().first;
 				count++;
 			}
-
+			m_marchandises.push_back(march);
 		}
 	}
 	else
@@ -52,8 +53,8 @@ void GameManager::chargerEntreprises(std::string chemin)
 	std::regex march_rgx(R"(([^,\n]+))"); // Utilise Raw string, sélectionne tout les éléments entre les virgules
 	std::smatch match;
 
-	std::string nom;
-	float capital;
+	std::string nom = "";
+	float capital = 0;
 	std::vector<std::string> marchandises;
 
 	if (fichier)
@@ -77,13 +78,31 @@ void GameManager::chargerEntreprises(std::string chemin)
 						marchandises.push_back(match[0].str());
 						break;
 				}
+				it = match.suffix().first;
+				count++;
 			}
 			m_entreprises.push_back(Entreprise(nom, capital, marchandises));
-			count++;
 		}
 	}
 	else
 	{
 		std::cerr << "Impossible d'ouvrir le fichier: " << chemin << std::endl;
+	}
+}
+
+void GameManager::listerMarchandises()
+{
+	for (auto &march : m_marchandises) {
+		std::cout << march << std::endl;
+	}
+}
+
+void GameManager::listerEntreprises()
+{
+	for (auto &ent : m_entreprises) {
+		std::cout << ent.getNom() << " " << ent.getTresorerie() << std::endl;
+		for(auto &march : ent.getProduits()) {
+			std::cout << "  -" << march << std::endl;
+		}
 	}
 }

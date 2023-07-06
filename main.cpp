@@ -1,6 +1,14 @@
 #include <iostream>
 
+#include "GameManager.h"
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    GameManager gm;
+
+    gm.chargerMarchandises("./produits.csv");
+    gm.listerMarchandises();
+
+    gm.chargerEntreprises("./entreprises.csv");
+    gm.listerEntreprises();
 }

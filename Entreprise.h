@@ -27,7 +27,7 @@ public:
 
 	std::string getNom() const;
 	float getTresorerie() const;
-	std::vector<std::string>& getProduits() const;
+	std::vector<std::string> getProduits() const;
 
 	// Donne le prix d'achat d'une quantite de produit à une entreprise donnée
 	float devisAchat(Entreprise* entreprise, std::string type, int quantite);
