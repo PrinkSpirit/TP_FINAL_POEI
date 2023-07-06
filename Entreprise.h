@@ -36,9 +36,9 @@ public:
 	// Calcule le prix de vente d'une quantite de produit donnée
 	float calculerDevis(std::string type, int quantite);
 	/// Vend des produits
-	bool vendre(std::string type, int quantite);
+	std::vector<Marchandise*> vendre(std::string type, int quantite);
 
-	std::vector<Marchandise*>* voirStock(std::string type) const;
+	std::vector<Marchandise*>* voirStock(std::string type);
 
 	virtual void jouerTour() {};	// Joue un tour de jeu
 	/// Fabrique le produit indiqué, en quantité indiquée, 

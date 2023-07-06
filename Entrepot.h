@@ -14,6 +14,7 @@ public:
 	~Entrepot();
 
 	void stocker(Marchandise* marchandise);
+	void stocker(std::vector<Marchandise*> marchandises);
 	void destocker(Marchandise* marchandise);
 	void destocker(std::string type, int id);
 

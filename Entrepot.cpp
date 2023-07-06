@@ -18,6 +18,13 @@ void Entrepot::stocker(Marchandise* marchandise) {
 	m_stock[marchandise->nom].push_back(marchandise);
 }
 
+void Entrepot::stocker(std::vector<Marchandise*> marchandises)
+{
+	if(marchandises.size() > 0) {
+		m_stock[marchandises[0]->nom].insert(m_stock[marchandises[0]->nom].end(), marchandises.begin(), marchandises.end());
+	}
+}
+
 void Entrepot::destocker(Marchandise* marchandise) {
 	std::vector<Marchandise*>* listeMarchandise = &m_stock[marchandise->nom];
 
@@ -52,4 +59,6 @@ void Entrepot::afficherStock() {
 	}
 }
 
-std::vector<Marchandise*>* Entrepot::getStock(std::string type) { return &m_stock[type]; }
+std::vector<Marchandise*>* Entrepot::getStock(std::string type) { 
+	return &m_stock[type]; 
+}
