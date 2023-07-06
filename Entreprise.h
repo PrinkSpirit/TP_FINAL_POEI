@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "Marchandise.h"
+
 #include "Entrepot.h"
 
 #include <string>
@@ -17,7 +17,7 @@ protected:
 
 	Entrepot m_entrepot;			// Entrepot de l'entreprise
 
-	std::vector<std::string> m_produits;	// Liste des produits fabriqués par l'entreprise
+	std::map<std::string, TypeProduit> m_produits;	// Liste des produits fabriqués par l'entreprise
 
 public:
 	Entreprise();

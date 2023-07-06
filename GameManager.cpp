@@ -7,6 +7,13 @@ GameManager::GameManager()
 {
 }
 
+GameManager::GameManager(std::string produits, std::string entreprises)
+{
+	chargerMarchandises(produits);
+	m_entreprises.push_back(Fournisseur(m_produits));
+	chargerEntreprises(entreprises);
+}
+
 GameManager::~GameManager()
 {
 }
@@ -23,22 +30,22 @@ void GameManager::chargerMarchandises(std::string chemin)
 
 		while (std::getline(fichier, ligne))
 		{
-			Marchandise march;
+			TypeProduit march;
 			int count = 0;
 			std::string::const_iterator it(ligne.cbegin());
 			while (std::regex_search(it, ligne.cend(), match, march_rgx)) {
 				if (count == 0) {
-					march.nom = match[0].str();
+					march.m_nom = match[0].str();
 				} else {
-					if(march.listeIngredients.find(match[0].str()) == march.listeIngredients.end())
-						march.listeIngredients[match[0].str()] = 1;
+					if(march.m_listeIngredients.find(match[0].str()) == march.m_listeIngredients.end())
+						march.m_listeIngredients[match[0].str()] = 1;
 					else
-						march.listeIngredients[match[0].str()] +=1;
+						march.m_listeIngredients[match[0].str()] +=1;
 				}
 				it = match.suffix().first;
 				count++;
 			}
-			m_marchandises.push_back(march);
+			m_produits.push_back(march);
 		}
 	}
 	else
@@ -60,7 +67,6 @@ void GameManager::chargerEntreprises(std::string chemin)
 	if (fichier)
 	{
 		std::string ligne;
-		Marchandise march;
 
 		while (std::getline(fichier, ligne))
 		{
@@ -82,6 +88,7 @@ void GameManager::chargerEntreprises(std::string chemin)
 				count++;
 			}
 			m_entreprises.push_back(Entreprise(nom, capital, marchandises));
+			marchandises.clear();
 		}
 	}
 	else
@@ -92,7 +99,7 @@ void GameManager::chargerEntreprises(std::string chemin)
 
 void GameManager::listerMarchandises()
 {
-	for (auto &march : m_marchandises) {
+	for (auto &march : m_produits) {
 		std::cout << march << std::endl;
 	}
 }
@@ -102,7 +109,7 @@ void GameManager::listerEntreprises()
 	for (auto &ent : m_entreprises) {
 		std::cout << ent.getNom() << " " << ent.getTresorerie() << std::endl;
 		for(auto &march : ent.getProduits()) {
-			std::cout << "  -" << march << std::endl;
+			std::cout << " -" << march << std::endl;
 		}
 	}
 }

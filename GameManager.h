@@ -7,16 +7,18 @@
 #include <string>
 
 #include "Entreprise.h"
+#include "Fournisseur.h"
 #include "Marchandise.h"
 
 class GameManager
 {
 protected:
 	std::vector<Entreprise> m_entreprises;
-	std::vector<Marchandise> m_marchandises;
+	std::vector<TypeProduit> m_produits;
 
 public:
 	GameManager();
+	GameManager(std::string produits, std::string entreprises);
 	~GameManager();
 
 	void chargerMarchandises(std::string chemin);
@@ -25,4 +27,5 @@ public:
 	void listerMarchandises();
 	void listerEntreprises();
 };
+
 
