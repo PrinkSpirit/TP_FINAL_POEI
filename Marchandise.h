@@ -22,8 +22,9 @@ struct Marchandise
 	float prix = -1.0f;				// Prix de vente de la marchandise
 	float qualite = -1.0f;			// Qualité de la marchandise
 
-	std::map<TypeMarchandise, int> listeIngredients; // Liste des ingredients necessaires pour fabriquer la marchandise
+	std::map<std::string, int> listeIngredients; // Liste des ingredients necessaires pour fabriquer la marchandise
 
 	Marchandise() {};
 };
 
+std::ostream& operator<<(std::ostream& os, const Marchandise& m);

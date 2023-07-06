@@ -15,7 +15,7 @@ Entrepot::~Entrepot() {
 }
 
 void Entrepot::stocker(Marchandise* marchandise) {
-	m_stock[marchandise->type].push_back(marchandise);
+	m_stock[marchandise->nom].push_back(marchandise);
 }
 
 void Entrepot::destocker(Marchandise* marchandise) {
@@ -29,7 +29,7 @@ void Entrepot::destocker(Marchandise* marchandise) {
 	}
 }
 
-void Entrepot::destocker(TypeMarchandise type, int id) {
+void Entrepot::destocker(std::string type, int id) {
 	std::vector<Marchandise*>* listeMarchandise = &m_stock[type];
 
 	for (int i = 0; i < listeMarchandise->size(); i++) {
@@ -40,18 +40,16 @@ void Entrepot::destocker(TypeMarchandise type, int id) {
 	}
 }
 
-int Entrepot::nombreProduit(TypeMarchandise type) {
+int Entrepot::nombreProduit(std::string type) {
 	return m_stock[type].size();
 }
 
 void Entrepot::afficherStock() {
 	for (auto it = m_stock.begin(); it != m_stock.end(); it++) {
-		std::cout << "Type: " << (int)it->first << std::endl;
-
 		for (int i = 0; i < it->second.size(); i++) {
-			std::cout << it->second[i]->id << ":" << it->second[i]->nom << std::endl;
+			std::cout << it->second[i] << std::endl;
 		}
 	}
 }
 
-inline std::vector<Marchandise*>* Entrepot::getStock(TypeMarchandise type) { return &m_stock[type]; }
+std::vector<Marchandise*>* Entrepot::getStock(std::string type) { return &m_stock[type]; }

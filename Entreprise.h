@@ -13,31 +13,38 @@ class Entreprise
 {
 protected:
 	std::string m_nom;				// Nom de l'entreprise
-	float tresorerie;				// Quantite d'argent disponible
+	float m_tresorerie;				// Quantite d'argent disponible
 
 	Entrepot m_entrepot;			// Entrepot de l'entreprise
+
+	std::vector<std::string> m_produits;	// Liste des produits fabriqués par l'entreprise
 
 public:
 	Entreprise();
 	Entreprise(std::string nom, float capitalDepart);
+	Entreprise(std::string nom, float capitalDepart, std::vector<std::string> listeProduit);
 	virtual ~Entreprise();
 
+	std::string getNom() const;
+	float getTresorerie() const;
+	std::vector<std::string>& getProduits() const;
+
 	// Donne le prix d'achat d'une quantite de produit à une entreprise donnée
-	float devisAchat(Entreprise* entreprise, TypeMarchandise type, int quantite);
+	float devisAchat(Entreprise* entreprise, std::string type, int quantite);
 	// Achete des produits
-	bool acheter(Entreprise* entreprise, TypeMarchandise type, int quantite);
+	bool acheter(Entreprise* entreprise, std::string type, int quantite);
 	// Calcule le prix de vente d'une quantite de produit donnée
-	float calculerDevis(TypeMarchandise type, int quantite);
+	float calculerDevis(std::string type, int quantite);
 	/// Vend des produits
-	bool vendre(TypeMarchandise type, int quantite);
+	bool vendre(std::string type, int quantite);
 
-	std::vector<Marchandise*>* voirStock(TypeMarchandise type) const;
+	std::vector<Marchandise*>* voirStock(std::string type) const;
 
-	virtual void jouerTour() = 0;	// Joue un tour de jeu
+	virtual void jouerTour() {};	// Joue un tour de jeu
 	/// Fabrique le produit indiqué, en quantité indiquée, 
 	/// sélectionne les ingredients nécessaires automatiquement
-	virtual void fabriquer(TypeMarchandise type, int quantite) = 0;	
+	virtual void fabriquer(std::string type, int quantite) {};
 	/// Fabrique le produit indiqué avec les ingredients fournis
-	virtual void fabriquer(TypeMarchandise type, std::vector<Marchandise*> ingredients) = 0;	
+	virtual void fabriquer(std::string type, std::vector<Marchandise*> ingredients) {};
 };
 

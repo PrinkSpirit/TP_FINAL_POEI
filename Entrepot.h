@@ -7,7 +7,7 @@
 
 class Entrepot
 {
-	std::map<TypeMarchandise, std::vector<Marchandise*>> m_stock; // Liste des marchandises en stock
+	std::map<std::string, std::vector<Marchandise*>> m_stock; // Liste des marchandises en stock
 
 public:
 	Entrepot();
@@ -15,12 +15,12 @@ public:
 
 	void stocker(Marchandise* marchandise);
 	void destocker(Marchandise* marchandise);
-	void destocker(TypeMarchandise type, int id);
+	void destocker(std::string type, int id);
 
-	int nombreProduit(TypeMarchandise type);
+	int nombreProduit(std::string type);
 
 	void afficherStock();
 
-	std::vector<Marchandise*>* getStock(TypeMarchandise type);
+	std::vector<Marchandise*>* getStock(std::string type);
 };
 
