@@ -1,3 +1,5 @@
+/// Auteur: Pierre MASSONIE
+
 #include "bddProduit.h"
 
 #include <regex>
@@ -20,7 +22,8 @@ bddProduit::~bddProduit() { }
 
 void bddProduit::chargerListeTypeProduit(std::string chemin) {
 	std::ifstream fichier(chemin);
-	std::regex march_rgx(R"(([^,\n]+))"); // Utilise Raw string, sélectionne tout les éléments entre les virgules
+	// Utilise Raw string, sélectionne tout les éléments entre les virgules
+	std::regex march_rgx(R"(([^,\n]+))");
 	std::smatch match;
 
 	if (fichier) {
@@ -29,23 +32,27 @@ void bddProduit::chargerListeTypeProduit(std::string chemin) {
 		while (std::getline(fichier, ligne)) {
 			TypeProduit produit;
 			std::string nomProduit;
-			int count = 0;
+			int count = 0;		  // Compteur pour savoir quel élément on traite
+
+			// Sélection les charactères jusqu'a trouver une virugle
 			std::string::const_iterator it(ligne.cbegin());
 			while (std::regex_search(it, ligne.cend(), match, march_rgx)) {
-				if (count == 0) {
+				if (count == 0) { // Premier élément est le nom du produit
 					produit.m_nom = match[0].str();
 				}
-				else {
+				else { // Les autres sont les ingrédients
 					produit.ajouterIngredient(match[0].str());
 				}
 				it = match.suffix().first;
 				count++;
 			}
+			// On insère le produit à son nom
 			m_listeTypeProduit.insert({ produit.m_nom, produit });
 		}
 	}
 	else {
 		std::cerr << "Impossible d'ouvrir le fichier: " << chemin << std::endl;
+		terminate(); // Sans ce fichier le programme n'a pas de sens
 	}
 	return;
 }

@@ -22,11 +22,11 @@ struct Marchandise
 	TypeProduit m_type;				// Identifi le type du produit ainsi que la liste de ses ingrédients
 
 	Marchandise() = delete;
-	Marchandise(std::string type) : m_nom(type) {
-		m_type = bddProduit::getInstance()->produitParNom(type);
-	};
+	Marchandise(std::string type);;
 
-	Marchandise(TypeProduit type) : m_nom(type.m_nom), m_type(type) {};
+	Marchandise(TypeProduit type);;
 };
 
+// Décrit la machandise dans le format suivant:
+// [id]nom - prix$ quanlité%
 std::ostream& operator<<(std::ostream& os, const Marchandise& m);

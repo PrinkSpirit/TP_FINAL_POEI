@@ -1,3 +1,5 @@
+/// Auteur: Pierre MASSONIE
+
 #pragma once
 
 #include <string>

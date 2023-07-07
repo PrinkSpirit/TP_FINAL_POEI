@@ -1,3 +1,5 @@
+/// Auteur: Pierre MASSONIE
+
 #include "TypeProduit.h"
 
 

@@ -1,3 +1,5 @@
+/// Auteur: Pierre MASSONIE
+
 #include "Fournisseur.h"
 
 Fournisseur::Fournisseur() : Entreprise("Fournisseur", 0.0f)
