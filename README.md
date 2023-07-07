@@ -32,45 +32,45 @@
 ## FABRICATION SOUS-PRODUITS : ##
 
 Entreprise veut fabriquer "quantité" de "nomProduit"<br />
-Achète "quantité" de "nomMatière" à "LaMine" pour "montant"
-Soustraction de "montant" - "trésorerie"
-Prix de vente = "montant" + "chargesEntreprises" + "pourcentageMarge"
-Enregistrement "nombreProduit" dans le stock
-Vend "nomProduit" pour "montant"
-Soustraction du stock
-Fabrication pour maintient du stock à "quantitéStock" par jour
+Achète "quantité" de "nomMatière" à "LaMine" pour "montant"<br />
+Soustraction de "montant" - "trésorerie"<br />
+Prix de vente = "montant" + "chargesEntreprises" + "pourcentageMarge"<br />
+Enregistrement "nombreProduit" dans le stock<br />
+Vend "nomProduit" pour "montant"<br />
+Soustraction du stock<br />
+Fabrication pour maintient du stock à "quantitéStock" par jour<br />
 
 
 ## FABRICATION ARTICLES : ##
 
-Entreprise fabrique "quantité" de "nomArticle"
-Achète "quantité" de "nomMatière" à "LaMine" pour "montant"
-Achète "nomProduits" à "nomEntreprise"
-Si "nomEntreprise" vend le même produit = concurrent direct donc prix de vente plus cher
-Soustraction de "montant" - "trésorerie"
-Prix de vente = "montant" + "chargesEntreprises" + "marge"
-Enregistrement "nombreProduit" dans le stock
-Vend "nomArticle" pour "montant"
-Soustraction du stock
-Fabrication pour maintient du stock à "quantitéStock" par jour
+Entreprise fabrique "quantité" de "nomArticle"<br />
+Achète "quantité" de "nomMatière" à "LaMine" pour "montant"<br />
+Achète "nomProduits" à "nomEntreprise"<br />
+Si "nomEntreprise" vend le même produit = concurrent direct donc prix de vente plus cher<br />
+Soustraction de "montant" - "trésorerie"<br />
+Prix de vente = "montant" + "chargesEntreprises" + "marge"<br />
+Enregistrement "nombreProduit" dans le stock<br />
+Vend "nomArticle" pour "montant"<br />
+Soustraction du stock<br />
+Fabrication pour maintient du stock à "quantitéStock" par jour<br />
 
 
 ## QUALITÉ : ##
 
-Attribution du score de qualité à minimum 1 au début. Selon la catégorie du produit et le domaine de l'entreprise (si entreprise de métallurgie vend fil 
-électrique : qualité supérieur, si entreprise de plastique : qualité inférieur)
-Score de qualité augmenté avec la recherche
-Augmentation du score de 0.2 à chaque niveau de recherche
-Augmentation du prix de vente : "prixVente" x "scoreQualité"
+Attribution du score de qualité à minimum 1 au début. Selon la catégorie du produit et le domaine de l'entreprise (si entreprise de métallurgie vend fil<br />
+électrique : qualité supérieur, si entreprise de plastique : qualité inférieur)<br />
+Score de qualité augmenté avec la recherche<br />
+Augmentation du score de 0.2 à chaque niveau de recherche<br />
+Augmentation du prix de vente : "prixVente" x "scoreQualité"<br />
 
 
 ## RECHERCHE ET DÉVELOPPEMENT : ##
 
-Entreprise investi "montantInvestissement" pour la recherche et le développement de "nomProduit"
-Déduction de "montantInvestissement" - "trésorerie"
-Augmentation niveau de recherche + 1
-Augmentation du score qualité de 0.2
-Augmentation du prix de vente de "nomProduit"
+Entreprise investi "montantInvestissement" pour la recherche et le développement de "nomProduit"<br />
+Déduction de "montantInvestissement" - "trésorerie"<br />
+Augmentation niveau de recherche + 1<br />
+Augmentation du score qualité de 0.2<br />
+Augmentation du prix de vente de "nomProduit"<br />
 
 
 ## EXEMPLE DÉROULEMENT ALGORYTHME : ##
