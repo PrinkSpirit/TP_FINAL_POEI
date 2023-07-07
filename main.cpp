@@ -5,15 +5,9 @@
 
 int main()
 {
-    GameManager gm;
+    GameManager gm("./produits.csv", "./entreprises.csv");
 
-    system("cls"); // Necessaire pour éviter des problèmes d'affichage
+    gm.jouer();
 
-    gm.chargerMarchandises("./produits.csv");
-    gm.listerTypeMarchandises();
-
-    gm.chargerEntreprises("./entreprises.csv");
-    gm.listerEntreprises();
-
-    
+    return 0;
 }

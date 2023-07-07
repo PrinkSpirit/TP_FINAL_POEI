@@ -16,7 +16,16 @@ class GameManager
 protected:
 	bddProduit* m_bddProduits;
 	std::vector<Entreprise> m_entreprises;
-	
+
+	enum class action {
+		listerMarchandises,
+		listerEntreprises,
+		jouerTour,
+		quitter,
+		invalide
+	};
+
+	action attendreCommande();
 
 public:
 	GameManager();
@@ -28,6 +37,8 @@ public:
 
 	void listerTypeMarchandises();
 	void listerEntreprises();
+
+	void jouer();
 };
 
 
