@@ -6,7 +6,7 @@
 class Fournisseur : public Entreprise
 {
 public:
-	Fournisseur(std::vector<TypeProduit> listProduits);
+	Fournisseur();
 	~Fournisseur();
 
 	virtual void jouerTour() override;

@@ -10,7 +10,7 @@ int main()
     system("cls"); // Necessaire pour éviter des problèmes d'affichage
 
     gm.chargerMarchandises("./produits.csv");
-    gm.listerMarchandises();
+    gm.listerTypeMarchandises();
 
     gm.chargerEntreprises("./entreprises.csv");
     gm.listerEntreprises();

@@ -10,7 +10,7 @@ GameManager::GameManager()
 GameManager::GameManager(std::string produits, std::string entreprises)
 {
 	chargerMarchandises(produits);
-	m_entreprises.push_back(Fournisseur(m_produits));
+	m_entreprises.push_back(Fournisseur());
 	chargerEntreprises(entreprises);
 }
 
@@ -20,38 +20,7 @@ GameManager::~GameManager()
 
 void GameManager::chargerMarchandises(std::string chemin)
 {
-	std::ifstream fichier(chemin);
-	std::regex march_rgx(R"(([^,\n]+))"); // Utilise Raw string, sélectionne tout les éléments entre les virgules
-	std::smatch match;
-
-	if (fichier)
-	{
-		std::string ligne;
-
-		while (std::getline(fichier, ligne))
-		{
-			TypeProduit march;
-			int count = 0;
-			std::string::const_iterator it(ligne.cbegin());
-			while (std::regex_search(it, ligne.cend(), match, march_rgx)) {
-				if (count == 0) {
-					march.m_nom = match[0].str();
-				} else {
-					if(march.m_listeIngredients.find(match[0].str()) == march.m_listeIngredients.end())
-						march.m_listeIngredients[match[0].str()] = 1;
-					else
-						march.m_listeIngredients[match[0].str()] +=1;
-				}
-				it = match.suffix().first;
-				count++;
-			}
-			m_produits.push_back(march);
-		}
-	}
-	else
-	{
-		std::cerr << "Impossible d'ouvrir le fichier: " << chemin << std::endl;
-	}
+	m_bddProduits = bddProduit::initBdd(chemin);
 }
 
 void GameManager::chargerEntreprises(std::string chemin)
@@ -97,11 +66,9 @@ void GameManager::chargerEntreprises(std::string chemin)
 	}
 }
 
-void GameManager::listerMarchandises()
+void GameManager::listerTypeMarchandises()
 {
-	for (auto &march : m_produits) {
-		std::cout << march << std::endl;
-	}
+	m_bddProduits->afficherListeProduit();
 }
 
 void GameManager::listerEntreprises()

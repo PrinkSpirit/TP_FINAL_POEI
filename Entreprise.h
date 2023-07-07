@@ -4,6 +4,9 @@
 #pragma once
 
 
+#include "Marchandise.h"
+#include "TypeProduit.h"
+#include "bddProduit.h"
 #include "Entrepot.h"
 
 #include <string>
@@ -14,10 +17,10 @@ class Entreprise
 protected:
 	std::string m_nom;				// Nom de l'entreprise
 	float m_tresorerie;				// Quantite d'argent disponible
+	bddProduit* m_bddProduit;		// Base de données des produits
 
 	Entrepot m_entrepot;			// Entrepot de l'entreprise
-
-	std::map<std::string, TypeProduit> m_produits;	// Liste des produits fabriqués par l'entreprise
+	std::vector<std::string> m_produits;	// Liste des produits fabriqués par l'entreprise
 
 public:
 	Entreprise();
@@ -33,10 +36,14 @@ public:
 	float devisAchat(Entreprise* entreprise, std::string type, int quantite);
 	// Achete des produits
 	bool acheter(Entreprise* entreprise, std::string type, int quantite);
+	/// Permet de cibler des produits spécifiques
+	bool acheter(Entreprise* entreprise, std::vector<Marchandise*> marchandises);
 	// Calcule le prix de vente d'une quantite de produit donnée
 	float calculerDevis(std::string type, int quantite);
 	/// Vend des produits
 	std::vector<Marchandise*> vendre(std::string type, int quantite);
+	/// Permet de cibler des produits spécifiques
+	std::vector<Marchandise*> vendre(std::vector<Marchandise*> marchandises);
 
 	std::vector<Marchandise*>* voirStock(std::string type);
 

@@ -2,15 +2,15 @@
 
 #include "Entreprise.h"
 
-Entreprise::Entreprise() : m_nom("Sans nom"), m_tresorerie(0.0f)
+Entreprise::Entreprise() : m_nom("Sans nom"), m_tresorerie(0.0f), m_bddProduit(bddProduit::getInstance())
 {
 }
 
-Entreprise::Entreprise(std::string nom, float capitalDepart) : m_nom(nom), m_tresorerie(capitalDepart)
+Entreprise::Entreprise(std::string nom, float capitalDepart) : m_nom(nom), m_tresorerie(capitalDepart), m_bddProduit(bddProduit::getInstance())
 {
 }
 
-Entreprise::Entreprise(std::string nom, float capitalDepart, std::vector<std::string> listeProduit) : m_nom(nom), m_tresorerie(capitalDepart), m_produits(listeProduit)
+Entreprise::Entreprise(std::string nom, float capitalDepart, std::vector<std::string> listeProduit) : m_nom(nom), m_tresorerie(capitalDepart), m_produits(listeProduit), m_bddProduit(bddProduit::getInstance())
 {
 
 }
@@ -53,13 +53,25 @@ bool Entreprise::acheter(Entreprise* entreprise, std::string type, int quantite)
 	return false;
 }
 
+bool Entreprise::acheter(Entreprise* entreprise, std::vector<Marchandise*> marchandises)
+{
+	std::vector<Marchandise*> panier;
+	panier = entreprise->vendre(marchandises);
+	if (panier == marchandises) {
+		m_entrepot.stocker(panier);
+		return true;
+	}
+
+	return false;
+}
+
 float Entreprise::calculerDevis(std::string type, int quantite)
 {
 	std::vector<Marchandise*>* stock = m_entrepot.getStock(type);
 	float devis = 0.0f;
 	if (stock->size() >= quantite) {
 		for (int i = 0; i < quantite; i++) {
-			devis += stock->at(i)->prix;
+			devis += stock->at(i)->m_prix;
 		}
 	}
 	return devis;
@@ -68,7 +80,29 @@ float Entreprise::calculerDevis(std::string type, int quantite)
 std::vector<Marchandise*> Entreprise::vendre(std::string type, int quantite)
 {
 	std::vector<Marchandise*> marchandises;
+	if (m_entrepot.nombreProduit(type) >= quantite) {
+		std::vector<Marchandise*>* stock = m_entrepot.getStock(type);
+		for (int i = 0; i < quantite; i++) {
+			marchandises.push_back(stock->at(i));
+		}
+		for (int i = 0; i < quantite; i++) {
+			m_entrepot.destocker(marchandises[i]);
+		}
+	}
+
 	return marchandises;
+}
+
+std::vector<Marchandise*> Entreprise::vendre(std::vector<Marchandise*> marchandises)
+{
+	std::vector<Marchandise*> panier;
+	for(auto &marchandise : marchandises) {
+		if (m_entrepot.enInventaire(marchandise)) {
+			panier.push_back(marchandise);
+		}
+	}
+
+	return panier;
 }
 
 std::vector<Marchandise*>* Entreprise::voirStock(std::string type)

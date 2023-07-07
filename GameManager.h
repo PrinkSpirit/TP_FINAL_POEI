@@ -9,12 +9,14 @@
 #include "Entreprise.h"
 #include "Fournisseur.h"
 #include "Marchandise.h"
+#include "bddProduit.h"
 
 class GameManager
 {
 protected:
+	bddProduit* m_bddProduits;
 	std::vector<Entreprise> m_entreprises;
-	std::vector<TypeProduit> m_produits;
+	
 
 public:
 	GameManager();
@@ -24,7 +26,7 @@ public:
 	void chargerMarchandises(std::string chemin);
 	void chargerEntreprises(std::string chemin);
 
-	void listerMarchandises();
+	void listerTypeMarchandises();
 	void listerEntreprises();
 };
 
