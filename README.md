@@ -12,6 +12,7 @@
 
 
 ## Produits : ##
+> Produits vendu par les entreprises et matières nécessaires à leurs fabrication
 
 * Fil électrique : Fil de cuivre, Gaines plastique
 * Circuit imprimés : Résine, Fil de cuivre
