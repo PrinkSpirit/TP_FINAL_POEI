@@ -3,35 +3,35 @@
 ## ENTREPRISES (NOM, TRÉSORERIE, CHARGES/JOUR, POURCENTAGE MARGE) : ##
 > La Mine : Fourni toutes les matières premières nécessaire à la fabrication des produits. Ne vend qu'une certaines quantité par jour pour toute les entreprises
 	
-* La Mine (845 371 €, 5 912 €, 20 %): 		Bois, Fil de cuivre, Inox, Gaines plastique, Granulés plastique, Résine, Tissus, Mousse, Aluminium, Verre
-* Verrutil (182 347 €, 1 061 €, 19 %) :		Écrans, Fenêtres, Abris de jardin, Lunettes
-* Heavy Metal (550 645 €, 3 418 €, 16 %) : 	Vis, Circuits imprimés, Fil électrique, Ordinateurs, Écrans, Fenêtres
+* La Mine (845 371 €, 5 912 €, 20 %): 			Bois, Fil de cuivre, Inox, Gaines plastique, Granulés plastique, Résine, Tissus, Mousse, Aluminium, Verre
+* Verrutil (182 347 €, 1 061 €, 19 %) :			Écrans, Fenêtres, Abris de jardin, Lunettes
+* Heavy Metal (550 645 €, 3 418 €, 16 %) : 		Vis, Circuits imprimés, Fil électrique, Ordinateurs, Écrans, Fenêtres
 * Fantastic Plastic (198 269 €, 1 982 €, 18 %) :	Circuits imprimés, Coques ordinateurs, Lunettes, Ordinateurs
-* Fabric Textil (129 921 €, 1 145 €, 21 %) : 	Matelas, Lits, Canapés, Fauteuils
-* Super Bois (415 326 €, 2 987 €, 17 %) : 	Bureau, Fauteuils, Abris de jardin, Lits, Canapés
+* Fabric Textil (129 921 €, 1 145 €, 21 %) : 		Matelas, Lits, Canapés, Fauteuils
+* Super Bois (415 326 €, 2 987 €, 17 %) : 		Bureau, Fauteuils, Abris de jardin, Lits, Canapés
 
 
 ## PRODUITS : ##
 
 * Fil électrique : Fil de cuivre, Gaines plastique
-- Circuit imprimés : Résine, Fil de cuivre
-+ Écrans : Circuits Imprimes, Fil de cuivre, Verre, Granules plastique, Vis
+* Circuit imprimés : Résine, Fil de cuivre
+* Écrans : Circuits Imprimes, Fil de cuivre, Verre, Granules plastique, Vis
 * Vis : Inox
 * Fenêtres : Aluminium, Verre, Vis
 * Abris de jardin : Bois, Vis, Fenêtre
 * Matelas : Tissus, Mousse
 * Bureau : Plaque de bois, Vis, Acier
-Coques ordinateurs : Granules plastique
-Ordinateurs : Ecran, Circuits imprimes, Fil de cuivre, Vis
-Lits : Bois, Vis, Matelas
-Canapés : Bois, Tissus,Mousse
-Lunettes : Verre, Inox
-Fauteuils : Tissus, Mousse, Granules Plastique, Vis
+* Coques ordinateurs : Granules plastique
+* Ordinateurs : Ecran, Circuits imprimes, Fil de cuivre, Vis
+* Lits : Bois, Vis, Matelas
+* Canapés : Bois, Tissus,Mousse
+* Lunettes : Verre, Inox
+* Fauteuils : Tissus, Mousse, Granules Plastique, Vis
 
 
 ## FABRICATION SOUS-PRODUITS : ##
 
-Entreprise veut fabriquer "quantité" de "nomProduit"
+Entreprise veut fabriquer "quantité" de "nomProduit"<br />
 Achète "quantité" de "nomMatière" à "LaMine" pour "montant"
 Soustraction de "montant" - "trésorerie"
 Prix de vente = "montant" + "chargesEntreprises" + "pourcentageMarge"
