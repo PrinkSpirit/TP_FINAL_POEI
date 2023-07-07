@@ -47,11 +47,11 @@ public:
 
 	std::vector<Marchandise*>* voirStock(std::string type);
 
-	virtual void jouerTour() {};	// Joue un tour de jeu
+	virtual void jouerTour();	// Joue un tour de jeu
 	/// Fabrique le produit indiqué, en quantité indiquée, 
 	/// sélectionne les ingredients nécessaires automatiquement
-	virtual void fabriquer(std::string type, int quantite) {};
+	virtual void fabriquer(std::string type, int quantite);
 	/// Fabrique le produit indiqué avec les ingredients fournis
-	virtual void fabriquer(std::string type, std::vector<Marchandise*> ingredients) {};
+	virtual void fabriquer(std::string type, std::vector<Marchandise*> ingredients);
 };
 

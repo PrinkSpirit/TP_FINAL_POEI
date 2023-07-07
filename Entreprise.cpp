@@ -105,7 +105,44 @@ std::vector<Marchandise*> Entreprise::vendre(std::vector<Marchandise*> marchandi
 	return panier;
 }
 
-std::vector<Marchandise*>* Entreprise::voirStock(std::string type)
-{
+std::vector<Marchandise*>* Entreprise::voirStock(std::string type) {
 	return m_entrepot.getStock(type);
+}
+
+void Entreprise::jouerTour() {
+}
+
+void Entreprise::fabriquer(std::string type, int quantite) {
+	float qualite = 0.0f;
+	TypeProduit typeProduit = m_bddProduit->produitParNom(type);
+	std::vector<Marchandise*>* marchandises;
+
+	// Vérifie si l'entreprise a assez de matières premières
+	for (auto it = typeProduit.m_listeIngredients.begin();
+		it != typeProduit.m_listeIngredients.end(); it++) {
+		if (m_entrepot.nombreProduit(it->first) < it->second) {
+			return;
+		}
+	}
+
+
+	for (auto it = typeProduit.m_listeIngredients.begin(); 
+		it != typeProduit.m_listeIngredients.end(); it++) {
+		marchandises = m_entrepot.getStock(it->first);
+		// Calcule la qualité moyenne des ingrédients
+		for (int i = 0; i < quantite; i++) {
+			qualite += marchandises->at(i)->m_qualite;
+		}
+		// Retire les ingrédients utilisés
+		for (int i = 0; i < quantite; i++) {
+			m_entrepot.destocker(marchandises->at(0));
+		}
+	}
+
+	Marchandise* marchandise = new Marchandise(type);
+	marchandise->m_qualite = qualite / quantite;
+	marchandise->m_prix = 10.0f;
+}
+
+void Entreprise::fabriquer(std::string type, std::vector<Marchandise*> ingredients) {
 }
