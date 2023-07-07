@@ -1,6 +1,6 @@
-La Mine;Bois;Fil de cuivre;Inox;Gaines plastique;Granules plastique;Resine;Tissus;Mousse;Aluminium;Verre
-Verrutil;182347;1061;19;Ecrans;Fenetres;Abris de jardin;Lunettes;;;
-Heavy Metal;550645;3418;16;Vis;Circuits imprimes;Fil electrique;Ordinateurs;Ecrans;Fenetres;
-Fantastic Plastic;198269;1982;18;Circuits imprimes;Coques ordinateurs;Lunettes;Ordinateurs;;;
-Fabric Textil;129 921;1145;21;Matelas;Lits;Canapes;Fauteuils;;;
-Super Bois;415326;2987;17;Bureau;Fauteuils;Abris de jardin;Lits;Canapes;;
+La Mine,Bois,Fil de cuivre,Inox,Gaines plastique,Granules plastique,Resine,Tissus,Mousse,Aluminium,Verre
+Verrutil,182347,1061,19,Ecrans,Fenetres,Abris de jardin,Lunettes,,,
+Heavy Metal,550645,3418,16,Vis,Circuits imprimes,Fil electrique,Ordinateurs,Ecrans,Fenetres,
+Fantastic Plastic,198269,1982,18,Circuits imprimes,Coques ordinateurs,Lunettes,Ordinateurs,,,
+Fabric Textil,129 921,1145,21,Matelas,Lits,Canapes,Fauteuils,,,
+Super Bois,415326,2987,17,Bureau,Fauteuils,Abris de jardin,Lits,Canapes,,
