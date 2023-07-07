@@ -1,25 +1,24 @@
-Bois;;;;;
-Fil de cuivre;;;;;
-Inox;;;;;
-Gaines plastique;;;;;
-Granules plastique;;;;;
-Resine;;;;;
-Tissus;;;;;
-Mousse;;;;;
-Aluminium;;;;;
-Verre;;;;;
-;;;;;
-Fil electrique;Fil de cuivre;Gaines plastique;;;
-Circuit imprimes;Resine;Fil de cuivre;;;
-Ecrans;Circuits Imprimes;Fil de cuivre;Plaque de verre;Granules plastique;Vis
-Vis;Inox;;;;
-Fenetre;Aluminium;Verre;Vis;;
-Abris de jardin;Bois;Vis;Fenetre;;
-Matelas;Tissus;Mousse;;;
-Bureau;Plaque de bois;Vis;Acier;;
-Coques ordinateurs;Granules plastique;;;;
-Ordinateurs;Ecran;Circuits imprimes;Fil de cuivre;Vis;
-Lits;Bois;Vis;Matelas;;
-Canapes;Bois;Tissus;Mousse;;
-Lunettes;Verre;Inox;;;
-Fauteuils;Tissus;Mousse;Granules Plastique;Vis;
+Bois
+Fil de cuivre
+Inox
+Gaines plastique
+Granules plastique
+Resine
+Tissus
+Mousse
+Aluminium
+Verre
+Fil electrique,Fil de cuivre,Gaines plastique
+Circuit imprimes,Resine,Fil de cuivre
+Ecrans,Circuits Imprimes,Fil de cuivre,Plaque de verre,Granules plastique,Vis
+Vis,Inox
+Fenetre,Aluminium,Verre,Vis
+Abris de jardin,Bois,Vis,Fenetre
+Matelas,Tissus,Mousse
+Bureau,Plaque de bois,Vis,Acier
+Coques ordinateurs,Granules plastique
+Ordinateurs,Ecran,Circuits imprimes,Fil de cuivre,Vis
+Lits,Bois,Vis,Matelas
+Canapes,Bois,Tissus,Mousse
+Lunettes,Verre,Inox
+Fauteuils,Tissus,Mousse,Granules Plastique,Vis
