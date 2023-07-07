@@ -1,6 +1,6 @@
-#Fonctionnement de l'algorythme#
+# Fonctionnement de l'algorythme #
 
-##ENTREPRISES (NOM, TRÉSORERIE, CHARGES/JOUR, POURCENTAGE MARGE) :##
+## ENTREPRISES (NOM, TRÉSORERIE, CHARGES/JOUR, POURCENTAGE MARGE) : ##
 "La Mine" : Fourni toutes les matières premières nécessaire à la fabrication des produits. Ne vend qu'une certaines quantité par jour pour toute les entreprises
 	
 	La Mine (845 371 €, 5 912 €, 20 %): 		Bois, Fil de cuivre, Inox, Gaines plastique, Granulés plastique, Résine, Tissus, Mousse, Aluminium, Verre
@@ -11,7 +11,7 @@
 	Super Bois (415 326 €, 2 987 €, 17 %) : 	Bureau, Fauteuils, Abris de jardin, Lits, Canapés
 
 
-##PRODUITS :##
+## PRODUITS : ##
 
 	Fil électrique : Fil de cuivre, Gaines plastique
 	Circuit imprimés : Résine, Fil de cuivre
@@ -29,7 +29,7 @@
 	Fauteuils : Tissus, Mousse, Granules Plastique, Vis
 
 
-##FABRICATION SOUS-PRODUITS :##
+## FABRICATION SOUS-PRODUITS : ##
 
 	Entreprise veut fabriquer "quantité" de "nomProduit"
 	Achète "quantité" de "nomMatière" à "LaMine" pour "montant"
@@ -41,7 +41,7 @@
 	Fabrication pour maintient du stock à "quantitéStock" par jour
 
 
-##FABRICATION ARTICLES :##
+## FABRICATION ARTICLES : ##
 
 	Entreprise fabrique "quantité" de "nomArticle"
 	Achète "quantité" de "nomMatière" à "LaMine" pour "montant"
@@ -55,7 +55,7 @@
 	Fabrication pour maintient du stock à "quantitéStock" par jour
 
 
-##QUALITÉ :##
+## QUALITÉ : ##
 
 	Attribution du score de qualité à minimum 1 au début. Selon la catégorie du produit et le domaine de l'entreprise (si entreprise de métallurgie vend fil 
 	électrique : qualité supérieur, si entreprise de plastique : qualité inférieur)
@@ -64,7 +64,7 @@
 	Augmentation du prix de vente : "prixVente" x "scoreQualité"
 
 
-##RECHERCHE ET DÉVELOPPEMENT :##
+## RECHERCHE ET DÉVELOPPEMENT : ##
 
 	Entreprise investi "montantInvestissement" pour la recherche et le développement de "nomProduit"
 	Déduction de "montantInvestissement" - "trésorerie"
@@ -73,7 +73,7 @@
 	Augmentation du prix de vente de "nomProduit"
 
 
-##EXEMPLE DÉROULEMENT ALGORYTHME :##
+## EXEMPLE DÉROULEMENT ALGORYTHME : ##
  
 	1. Choix du produit à fabriquer : "Ordinateurs"
 	2. Vérification des matières nécessaires à la fabrication : Écrans, Circuits Imprimés, Fil de cuivre, Verre, Granules plastique, Vis
