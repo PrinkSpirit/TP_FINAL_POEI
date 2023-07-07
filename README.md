@@ -81,13 +81,17 @@ Augmentation du prix de vente de "nomProduit"<br />
 
 1. Choix du produit à fabriquer : "Ordinateurs"
 2. Vérification des matières nécessaires à la fabrication : Écrans, Circuits Imprimés, Fil de cuivre, Verre, Granules plastique, Vis
-3. "Verrutil" et "Heavy Metal" fabriquent "Écrans" et "Circuits Imprimés"
-4. "Fantastic Plastic" et "Heavy Metal" achètent "quantité" de matière à "La Mine" pour la fabrication des écrans et circuits imprimés
-5. 
-6. Fabrication des écrans et circuits imprimés lorsque toutes les matières sont acheté et en stock
-7. Fabrication des ordinateurs lorsque toutes les pièces nécessaire à la fabrication sont fabriqué et en stock
-8. Ajout des ordinateurs dans le stock des entreprises
-9. "Heavy Metal" et "Verrutil" vendent des ordinateur pour "montant"
-10. Consommateurs achètent selon le score de qualité
-11. Soustraction du montant acheté par consommateurs du stock des entreprises
-12. Nouvelle fabrication pour maintenir le stock
+3. "Verrutil" et "Heavy Metal" fabriquent "Écrans" mais "Heavy Metal" et "Fantastic Plastic" fabriquent des "Circuits Imprimés"
+4. "Verrutil" et "Heavy Metal" achètent "quantité" de matière à "La Mine" pour la fabrication des écrans
+5. "Fantastic Plastic" et "Heavy Metal" achètent "quantité" de matière à "La Mine" pour la fabrication des circuits imprimés
+6. Soustraction du montant des achats de matières de la trésorerie de l'entreprise
+7. Fabrication des écrans et circuits imprimés lorsque toutes les matières sont acheté et en stock
+8. Fabrication des ordinateurs lorsque toutes les pièces nécessaire à la fabrication sont fabriqué et en stock
+9. "Heavy Metal" et "Fantastic Plastic" fabriques des ordinateurs
+10. Ces deux entreprises achetent selon leurs besoins des sous-produits aux entreprises concurrentes afin de fabriquer les ordinateurs en fonction de la qualité souhaité
+11. Fabrication des ordinateurs
+12. Ajout des ordinateurs dans le stock des entreprises
+13. "Heavy Metal" et "Verrutil" vendent des ordinateur pour "montant"
+14. Consommateurs achètent selon le score de qualité
+15. Soustraction du montant acheté par consommateurs du stock des entreprises
+16. Nouvelle fabrication pour maintenir le stock
