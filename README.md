@@ -75,18 +75,14 @@
 
 ## EXEMPLE DÉROULEMENT ALGORYTHME : ##
  
-	1. Choix du produit à fabriquer : "Ordinateurs"
-	2. Vérification des matières nécessaires à la fabrication : Écrans, Circuits Imprimés, Fil de cuivre, Verre, Granules plastique, Vis
-	3. "Verrutil" et "Heavy Metal" fabriquent "Écrans" et "Circuits Imprimés"
-	4. "Fantastic Plastic" et "Heavy Metal" achètent "quantité" de matière à "La Mine" pour la fabrication des écrans et circuits imprimés
-	5. Fabrication des écrans et circuits imprimés lorsque toutes les matières sont acheté et en stock
-	6. Fabrication des ordinateurs lorsque toutes les pièces nécessaire à la fabrication sont fabriqué et en stock
-	7. Ajout des ordinateurs dans le stock des entreprises
-	8. "Heavy Metal" et "Verrutil" vendent des ordinateur pour "montant"
-	9. Consommateurs achètent
-	10. Soustraction du montant acheté par consommateurs du stock des entreprises
-	11. Nouvelle fabrication pour maintenir le stock
-	
-
-
-
+1. Choix du produit à fabriquer : "Ordinateurs"
+2. Vérification des matières nécessaires à la fabrication : Écrans, Circuits Imprimés, Fil de cuivre, Verre, Granules plastique, Vis
+3. "Verrutil" et "Heavy Metal" fabriquent "Écrans" et "Circuits Imprimés"
+4. "Fantastic Plastic" et "Heavy Metal" achètent "quantité" de matière à "La Mine" pour la fabrication des écrans et circuits imprimés
+5. Fabrication des écrans et circuits imprimés lorsque toutes les matières sont acheté et en stock
+6. Fabrication des ordinateurs lorsque toutes les pièces nécessaire à la fabrication sont fabriqué et en stock
+7. Ajout des ordinateurs dans le stock des entreprises
+8. "Heavy Metal" et "Verrutil" vendent des ordinateur pour "montant"
+9. Consommateurs achètent
+10. Soustraction du montant acheté par consommateurs du stock des entreprises
+11. Nouvelle fabrication pour maintenir le stock
