@@ -3,12 +3,12 @@
 ## ENTREPRISES (NOM, TRÉSORERIE, CHARGES/JOUR, POURCENTAGE MARGE) : ##
 > La Mine : Fourni toutes les matières premières nécessaire à la fabrication des produits. Ne vend qu'une certaines quantité par jour pour toute les entreprises
 	
-La Mine (845 371 €, 5 912 €, 20 %): 		Bois, Fil de cuivre, Inox, Gaines plastique, Granulés plastique, Résine, Tissus, Mousse, Aluminium, Verre
-Verrutil (182 347 €, 1 061 €, 19 %) :		Écrans, Fenêtres, Abris de jardin, Lunettes
-Heavy Metal (550 645 €, 3 418 €, 16 %) : 	Vis, Circuits imprimés, Fil électrique, Ordinateurs, Écrans, Fenêtres
-Fantastic Plastic (198 269 €, 1 982 €, 18 %) :	Circuits imprimés, Coques ordinateurs, Lunettes, Ordinateurs
-Fabric Textil (129 921 €, 1 145 €, 21 %) : 	Matelas, Lits, Canapés, Fauteuils
-Super Bois (415 326 €, 2 987 €, 17 %) : 	Bureau, Fauteuils, Abris de jardin, Lits, Canapés
+* La Mine (845 371 €, 5 912 €, 20 %): 		Bois, Fil de cuivre, Inox, Gaines plastique, Granulés plastique, Résine, Tissus, Mousse, Aluminium, Verre
+* Verrutil (182 347 €, 1 061 €, 19 %) :		Écrans, Fenêtres, Abris de jardin, Lunettes
+* Heavy Metal (550 645 €, 3 418 €, 16 %) : 	Vis, Circuits imprimés, Fil électrique, Ordinateurs, Écrans, Fenêtres
+* Fantastic Plastic (198 269 €, 1 982 €, 18 %) :	Circuits imprimés, Coques ordinateurs, Lunettes, Ordinateurs
+* Fabric Textil (129 921 €, 1 145 €, 21 %) : 	Matelas, Lits, Canapés, Fauteuils
+* Super Bois (415 326 €, 2 987 €, 17 %) : 	Bureau, Fauteuils, Abris de jardin, Lits, Canapés
 
 
 ## PRODUITS : ##
