@@ -10,6 +10,7 @@ struct TypeProduit
 	std::string m_nom;
 	std::map<std::string, int> m_listeIngredients;
 	bool m_matierePremiere = true;	// Indique si le produit est une matière première. Automatiquemet mis à false lors de l'ajout d'ingrédients.
+	float m_coutRecherche = 2.0f;	// Coût de base de recherche par niveau du produit
 
 	void ajouterIngredient(std::string ingredient) {
 		if (this->m_listeIngredients.find(ingredient) != this->m_listeIngredients.end()) {
