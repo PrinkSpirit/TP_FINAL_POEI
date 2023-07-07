@@ -1,6 +1,6 @@
 # Fonctionnement de l'algorythme #
 
-## ENTREPRISES (NOM, TRÉSORERIE, CHARGES/JOUR, POURCENTAGE MARGE) : ##
+## Entreprises (Nom, Trésorerie, Charges/jour, Pourcentage marge) : ##
 > La Mine : Fourni toutes les matières premières nécessaire à la fabrication des produits. Ne vend qu'une certaines quantité par jour pour toute les entreprises
 	
 * La Mine (845 371 €, 5 912 €, 20 %): 			Bois, Fil de cuivre, Inox, Gaines plastique, Granulés plastique, Résine, Tissus, Mousse, Aluminium, Verre
@@ -11,7 +11,7 @@
 * Super Bois (415 326 €, 2 987 €, 17 %) : 		Bureau, Fauteuils, Abris de jardin, Lits, Canapés
 
 
-## PRODUITS : ##
+## Produits : ##
 
 * Fil électrique : Fil de cuivre, Gaines plastique
 * Circuit imprimés : Résine, Fil de cuivre
@@ -29,7 +29,8 @@
 * Fauteuils : Tissus, Mousse, Granules Plastique, Vis
 
 
-## FABRICATION SOUS-PRODUITS : ##
+## Fabricatiom sous-produits : ##
+> Les sous-produits sont fabriqués par certaines entreprises afin de fabriquer des articles (vis, écrans, circuits imprimés, fenêtres, matelas, coques ordinateurs)
 
 Entreprise veut fabriquer "quantité" de "nomProduit"<br />
 Achète "quantité" de "nomMatière" à "LaMine" pour "montant"<br />
@@ -41,7 +42,8 @@ Soustraction du stock<br />
 Fabrication pour maintient du stock à "quantitéStock" par jour<br />
 
 
-## FABRICATION ARTICLES : ##
+## Fabrication articles : ##
+> Les articles sont la production prête à être vendu aux consommateur.rices
 
 Entreprise fabrique "quantité" de "nomArticle"<br />
 Achète "quantité" de "nomMatière" à "LaMine" pour "montant"<br />
@@ -55,7 +57,8 @@ Soustraction du stock<br />
 Fabrication pour maintient du stock à "quantitéStock" par jour<br />
 
 
-## QUALITÉ : ##
+## Qualité : ##
+> Définit la qualité des articles et produit ce qui influera sur les ventes
 
 Attribution du score de qualité à minimum 1 au début. Selon la catégorie du produit et le domaine de l'entreprise (si entreprise de métallurgie vend fil<br />
 électrique : qualité supérieur, si entreprise de plastique : qualité inférieur)<br />
@@ -64,7 +67,8 @@ Augmentation du score de 0.2 à chaque niveau de recherche<br />
 Augmentation du prix de vente : "prixVente" x "scoreQualité"<br />
 
 
-## RECHERCHE ET DÉVELOPPEMENT : ##
+## Recherche et développement : ##
+> Augmente la qualité de ses produits afin de les vendrent mieux et plus cher
 
 Entreprise investi "montantInvestissement" pour la recherche et le développement de "nomProduit"<br />
 Déduction de "montantInvestissement" - "trésorerie"<br />
@@ -73,16 +77,17 @@ Augmentation du score qualité de 0.2<br />
 Augmentation du prix de vente de "nomProduit"<br />
 
 
-## EXEMPLE DÉROULEMENT ALGORYTHME : ##
- 
+## Exemple déroulement de l'algorythme : ##
+
 1. Choix du produit à fabriquer : "Ordinateurs"
 2. Vérification des matières nécessaires à la fabrication : Écrans, Circuits Imprimés, Fil de cuivre, Verre, Granules plastique, Vis
 3. "Verrutil" et "Heavy Metal" fabriquent "Écrans" et "Circuits Imprimés"
 4. "Fantastic Plastic" et "Heavy Metal" achètent "quantité" de matière à "La Mine" pour la fabrication des écrans et circuits imprimés
-5. Fabrication des écrans et circuits imprimés lorsque toutes les matières sont acheté et en stock
-6. Fabrication des ordinateurs lorsque toutes les pièces nécessaire à la fabrication sont fabriqué et en stock
-7. Ajout des ordinateurs dans le stock des entreprises
-8. "Heavy Metal" et "Verrutil" vendent des ordinateur pour "montant"
-9. Consommateurs achètent
-10. Soustraction du montant acheté par consommateurs du stock des entreprises
-11. Nouvelle fabrication pour maintenir le stock
+5. 
+6. Fabrication des écrans et circuits imprimés lorsque toutes les matières sont acheté et en stock
+7. Fabrication des ordinateurs lorsque toutes les pièces nécessaire à la fabrication sont fabriqué et en stock
+8. Ajout des ordinateurs dans le stock des entreprises
+9. "Heavy Metal" et "Verrutil" vendent des ordinateur pour "montant"
+10. Consommateurs achètent selon le score de qualité
+11. Soustraction du montant acheté par consommateurs du stock des entreprises
+12. Nouvelle fabrication pour maintenir le stock
