@@ -13,14 +13,14 @@
 
 ## PRODUITS : ##
 
-Fil électrique : Fil de cuivre, Gaines plastique
-Circuit imprimés : Résine, Fil de cuivre
-Écrans : Circuits Imprimes, Fil de cuivre, Verre, Granules plastique, Vis
-Vis : Inox
-Fenêtres : Aluminium, Verre, Vis
-Abris de jardin : Bois, Vis, Fenêtre
-Matelas : Tissus, Mousse
-Bureau : Plaque de bois, Vis, Acier
+* Fil électrique : Fil de cuivre, Gaines plastique
+- Circuit imprimés : Résine, Fil de cuivre
++ Écrans : Circuits Imprimes, Fil de cuivre, Verre, Granules plastique, Vis
+* Vis : Inox
+* Fenêtres : Aluminium, Verre, Vis
+* Abris de jardin : Bois, Vis, Fenêtre
+* Matelas : Tissus, Mousse
+* Bureau : Plaque de bois, Vis, Acier
 Coques ordinateurs : Granules plastique
 Ordinateurs : Ecran, Circuits imprimes, Fil de cuivre, Vis
 Lits : Bois, Vis, Matelas
