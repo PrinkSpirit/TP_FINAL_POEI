@@ -1,7 +1,7 @@
 # Fonctionnement de l'algorythme #
 
 ## ENTREPRISES (NOM, TRÉSORERIE, CHARGES/JOUR, POURCENTAGE MARGE) : ##
-"La Mine" : Fourni toutes les matières premières nécessaire à la fabrication des produits. Ne vend qu'une certaines quantité par jour pour toute les entreprises
+> "La Mine" : Fourni toutes les matières premières nécessaire à la fabrication des produits. Ne vend qu'une certaines quantité par jour pour toute les entreprises
 	
 	La Mine (845 371 €, 5 912 €, 20 %): 		Bois, Fil de cuivre, Inox, Gaines plastique, Granulés plastique, Résine, Tissus, Mousse, Aluminium, Verre
 	Verrutil (182 347 €, 1 061 €, 19 %) :		Écrans, Fenêtres, Abris de jardin, Lunettes
